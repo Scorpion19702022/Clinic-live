@@ -625,6 +625,28 @@ nav .wrapper .burger .hide {
     width: 100%;
     font-size: 1.2rem;
   }
+  .galleryclinic .swiper .swipperobject .obj {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .galleryclinic .swiper .swipperobject .obj img {
+    height: 60vh;
+  }
+  .galleryclinic .swiper .swipperobject .obj .slidertext {
+    position: relative;
+    height: 30%;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 @media (min-width: 768px) {
   nav .navcontact {
@@ -710,6 +732,20 @@ nav .wrapper .burger .hide {
     width: 100%;
     height: 34%;
     margin-bottom: 0;
+  }
+  .galleryclinic .swiper .swipperobject .obj .slidertext {
+    bottom: 8%;
+    height: 20%;
+  }
+  .galleryclinic .swiper .swipperobject .obj .slidertext h1 {
+    font-size: 4rem;
+  }
+  .galleryclinic .swiper .swipperobject .obj .slidertext p {
+    font-size: 2rem;
+  }
+  .galleryclinic .swiper .swiper-pagination {
+    position: absolute;
+    bottom: 4%;
   }
 }
 @media (min-width: 992px) {
@@ -823,6 +859,12 @@ nav .wrapper .burger .hide {
   .sectionaboutus .box__img {
     width: 27%;
   }
+  .galleryclinic .swiper .swipperobject .obj .slidertext {
+    width: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 @media (min-width: 1400px) {
   nav .wrapper .logo {
@@ -907,5 +949,11 @@ nav .wrapper .burger .hide {
   }
   .sectionaboutus .box {
     width: 75%;
+  }
+  .galleryclinic .swiper .swipperobject .obj .slidertext {
+    width: 50%;
+    left: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */
