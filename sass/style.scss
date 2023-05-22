@@ -127,11 +127,11 @@ nav {
 // ---HOME---
 
 .sectionhome {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	height: 100%;
 	overflow: hidden;
 	.info {
 		padding: 1em;
@@ -140,7 +140,7 @@ nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 1em;
+		// margin-bottom: 1em;
 		transform: translateY(50%);
 		opacity: 0;
 		transition: transform 1s, opacity 2s ease-in-out;
@@ -189,13 +189,13 @@ nav {
 // ---ABOUT US---
 
 .sectionaboutus {
-	height: 100%;
-	padding: 0em;
+	height: 100vh;
+	padding: 4em 2em 2em 2em;
 	background-image: url('../img/hospital_buoldig.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-size: 275%;
-	background-position: 0% 65px;
+	background-position: 0% 70%;
 	background-attachment: fixed;
 	overflow: hidden;
 	display: flex;
@@ -328,6 +328,118 @@ nav {
 					opacity: 1;
 				}
 			}
+		}
+	}
+}
+
+// ---OFFER---
+
+.sectionoffer {
+	height: 100vh;
+	.boxheading {
+		width: 100%;
+		height: 10%;
+		margin-bottom: 0.8em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// justify-content: space-between;
+		overflow: hidden;
+		&__heading {
+			font-size: 3.8rem;
+			text-align: right;
+			transform: translateY(80%);
+			opacity: 0;
+			transition: transform 0.5s ease-in-out, opacity 1.2s ease-in-out;
+		}
+		.line {
+			width: 100%;
+		}
+		.viewboxheading {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	.accordionbox {
+		width: 100%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		.accordion {
+			margin-bottom: 0.4em;
+			.accordionhead {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0.4em;
+				border: 0.04em solid var(--color-mediumone);
+				cursor: pointer;
+				transition: background-color 0.3s ease-in-out;
+				&__heading {
+					font-size: 2rem;
+					font-weight: 400;
+					transition: color 0.3s ease-in-out;
+				}
+				.accordionarrow {
+					font-size: 2rem;
+					color: var(--color-mediumone);
+					transition: color 0.3s ease-in-out;
+				}
+			}
+			.accordioninfo {
+				display: none;
+				margin: 0.4em 0em 1em 0em;
+				&__offer {
+					display: flex;
+					justify-content: space-between;
+					padding: 0.1em 0;
+					border-bottom: 0.1em dotted var(--color-darkone);
+					&--price {
+						color: var(--color-mediumone);
+						font-weight: bold;
+					}
+				}
+			}
+
+			.actioninfo {
+				display: block;
+			}
+
+			.actionbtn {
+				background-color: var(--color-mediumone);
+				.accordionhead__heading {
+					color: var(--color-white);
+				}
+				.accordionarrow {
+					color: var(--color-white);
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	.infooffer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 25%;
+		&__img {
+			height: 60%;
+			margin-bottom: 0.4em;
+			opacity: 0;
+			transform: translateY(100%);
+			transition: transform 0.5s ease-in-out, opacity 1.2s ease-in-out;
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.actioninfooffer {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		&__text {
+			text-align: center;
 		}
 	}
 }

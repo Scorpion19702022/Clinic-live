@@ -15,15 +15,27 @@ const infoHome = document.querySelector('.info')
 const boxCount = document.querySelector('.infomobile')
 const itemCount = document.querySelectorAll('.infocount__count')
 
-// console.log(boxCount)
-// console.log(itemCount)
+// ====================================================
+
+const headingOffer = document.querySelector('.boxheading__heading')
 
 // ====================================================
 
 const actionAbout = document.querySelector('.box__info')
 
+// ====================================================
+
+const accordion = document.querySelectorAll('.accordionhead')
+const accordionInfo = document.querySelectorAll('.accordioninfo')
+
+// ====================================================
+
+const logoOffer = document.querySelector('.infooffer__img')
+
+// ====================================================
+
 const scrollInAboutUs = () => {
-	// console.log(window.scrollY)
+	console.log(window.scrollY)
 	setTimeout(() => {
 		if (window.scrollY >= 520) {
 			actionAbout.classList.add('actionaboutus')
@@ -31,6 +43,20 @@ const scrollInAboutUs = () => {
 			actionAbout.classList.remove('actionaboutus')
 		}
 	}, 800)
+	setTimeout(() => {
+		if (window.scrollY >= 1150) {
+			headingOffer.classList.add('viewboxheading')
+		} else {
+			headingOffer.classList.remove('viewboxheading')
+		}
+	}, 300)
+	setTimeout(() => {
+		if (window.scrollY >= 1250) {
+			logoOffer.classList.add('actioninfooffer')
+		} else {
+			logoOffer.classList.remove('actioninfooffer')
+		}
+	}, 300)
 }
 
 // ====================================================
@@ -102,9 +128,36 @@ const startCounter = entry => {
 
 // ====================================================
 
+function openAccordionItems() {
+	if (this.nextElementSibling.classList.contains('actioninfo')) {
+		this.classList.remove('actionbtn')
+		this.nextElementSibling.classList.remove('actioninfo')
+	} else {
+		closeAccordionInfo()
+		addStylesAccordion()
+		this.classList.toggle('actionbtn')
+		this.nextElementSibling.classList.toggle('actioninfo')
+	}
+}
+
+const closeAccordionInfo = () => {
+	accordionInfo.forEach(el => {
+		el.classList.remove('actioninfo')
+	})
+}
+
+const addStylesAccordion = () => {
+	accordion.forEach(el => {
+		el.classList.remove('actionbtn')
+	})
+}
+
 // ====================================================
 
 burgerBtn.addEventListener('click', handleBtn)
 const observer = new IntersectionObserver(startCounter, optionCount)
 observer.observe(boxCount)
 window.addEventListener('scroll', scrollInAboutUs)
+accordion.forEach(btn => {
+	btn.addEventListener('click', openAccordionItems)
+})
