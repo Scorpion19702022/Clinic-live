@@ -736,12 +736,6 @@ nav .wrapper .burger .hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 .sectionteams .teams__img {
   height: 80%;
@@ -796,11 +790,6 @@ nav .wrapper .burger .hide {
 .sectionteams .teams .btnteams {
   -ms-flex-item-align: center;
       align-self: center;
-}
-.sectionteams .teamsscale {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  display: none;
 }
 .sectionteams .swiper {
   position: relative;
@@ -869,6 +858,9 @@ nav .wrapper .burger .hide {
 .sectionteams .swiper .swiper-pagination {
   position: absolute;
   left: -30%;
+}
+.sectionteams .swiperview {
+  display: none;
 }
 
 @media (max-width: 576px) {
@@ -1024,6 +1016,19 @@ nav .wrapper .burger .hide {
     width: 75%;
     margin-left: 5em;
   }
+  .sectionteams .swiper .card__text {
+    bottom: 8%;
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top-left-radius: 0em;
+  }
+  .sectionteams .swiper .swiper-pagination {
+    position: absolute;
+    left: 0%;
+  }
 }
 @media (min-width: 768px) {
   nav .navcontact {
@@ -1142,6 +1147,10 @@ nav .wrapper .burger .hide {
   .sectionoffer .infooffer__text {
     font-size: 2rem;
   }
+  .sectionteams .swiper {
+    width: 75%;
+    height: 100%;
+  }
 }
 @media (min-width: 992px) {
   nav .wrapper .logo a img {
@@ -1169,6 +1178,16 @@ nav .wrapper .burger .hide {
   }
   .sectionteams {
     padding: 8em 2em 2em 2em;
+  }
+  .sectionteams .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .sectionteams .swiper .card {
+    height: 95%;
+  }
+  .sectionteams .swiper .swiper-pagination {
+    left: 0%;
   }
 }
 @media (min-width: 1200px) {
@@ -1267,9 +1286,6 @@ nav .wrapper .burger .hide {
     font-size: 4.6rem;
   }
   .sectionteams .teams {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1278,6 +1294,7 @@ nav .wrapper .burger .hide {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 80%;
+    width: 85%;
   }
   .sectionteams .teams__img {
     height: 100%;
@@ -1418,5 +1435,8 @@ nav .wrapper .burger .hide {
   }
   .sectionteams .teams__info {
     width: 50%;
+  }
+  .sectionteams .swiper .card__text {
+    width: 47%;
   }
 }/*# sourceMappingURL=style.css.map */
