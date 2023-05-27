@@ -21,7 +21,7 @@
 	--color-mediumthree: #257ca3;
 	--color-darkone: #373b3e;
 	--color-dark: #000000;
-	--color-other: #9d1c5d;
+	--color-other: #8f102d;
 }
 
 html {
@@ -619,7 +619,7 @@ nav {
 					padding: 2em;
 					display: flex;
 					flex-direction: column;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: center;
 					border: 0.04em solid var(--color-mediumone);
 					box-shadow: 0.4em 0.4em 0em var(--color-lightfour);
@@ -627,7 +627,7 @@ nav {
 						position: absolute;
 						top: -12%;
 						left: -8%;
-						padding: 0.1em;
+						padding: 0em 0.4em 0.1em 0em;
 						font-size: 6rem;
 						color: var(--color-mediumone);
 						background-color: var(--color-white);
@@ -639,6 +639,9 @@ nav {
 						margin-bottom: 0.8em;
 					}
 					&--name {
+						position: absolute;
+						bottom: 5%;
+						right: 5%;
 						font-size: 1.4rem;
 						align-self: flex-end;
 					}
@@ -648,6 +651,100 @@ nav {
 		.swiper-pagination {
 			position: absolute;
 			bottom: 0;
+		}
+	}
+}
+
+// ---CONTACT---
+
+.sectioncontact {
+	padding: 8em 2em 2em 2em;
+	overflow: hidden;
+	.wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.box {
+			margin-top: 6em;
+			width: 100%;
+			height: 75%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.contactbox {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1em;
+				label {
+					font-size: 1.8rem;
+					margin-bottom: 0.2em;
+				}
+				input {
+					padding: 0.8em 0.4em;
+					font-size: 1.4rem;
+					border: 0.04em solid var(--color-mediumthree);
+					margin-bottom: 0.4em;
+				}
+				p {
+					color: var(--color-other);
+					text-align: center;
+					font-size: 1.8rem;
+					font-weight: 700;
+				}
+				.textarea {
+					max-width: 100%;
+					min-width: 100%;
+					max-height: 200px;
+					min-height: 200px;
+					font-size: 1.8rem;
+					padding: 0.6em 0.8em;
+					margin-bottom: 0.4em;
+					border: 0.04em solid var(--color-mediumthree);
+				}
+			}
+		}
+
+		.btncontact {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			button {
+				width: 40%;
+				padding: 0.8em 2em;
+			}
+		}
+
+		.status {
+			position: absolute;
+			top: 0;
+			padding: 1em 5em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			visibility: hidden;
+			transform: translateY(-300%);
+			background-color: var(--color-mediumone);
+			transition: transform 0.3s ease-in-out, visibility 1s ease-in-out;
+			.statusinfo {
+				font-size: 2rem;
+				color: var(--color-white);
+			}
+		}
+		.sendsuccess {
+			visibility: visible;
+			transform: translateY(0%);
+		}
+		.senderror {
+			visibility: visible;
+			transform: translateY(0%);
+			background-color: var(--color-other);
 		}
 	}
 }

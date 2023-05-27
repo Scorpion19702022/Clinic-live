@@ -62,7 +62,7 @@ const scrollInAboutUs = () => {
 		}
 	}, 300)
 	setTimeout(() => {
-		if (window.scrollY >= 2000) {
+		if (window.scrollY >= 1560) {
 			headingOpinios.classList.add('viewboxheading')
 		} else {
 			headingOpinios.classList.remove('viewboxheading')
@@ -170,11 +170,26 @@ const swiper = new Swiper('.opinionswiper', {
 	spaceBetween: 50,
 	loop: true,
 	autoplay: {
-		delay: 2500,
+		delay: 3000,
 		disableOnInteraction: false,
 	},
 	pagination: {
 		el: '.swiper-pagination',
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 40,
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 50,
+		},
+		1400: {
+			slidesPerView: 4,
+			slidesPerGroup: 2,
+			spaceBetween: 50,
+		},
 	},
 })
 

@@ -7,6 +7,10 @@ h1 {
   font-size: 3rem;
 }
 
+span {
+  color: #9d1c5d;
+}
+
 .line {
   margin: 0.2em 0;
   width: 50%;
@@ -107,7 +111,7 @@ button:hover {
   --color-mediumthree: #257ca3;
   --color-darkone: #373b3e;
   --color-dark: #000000;
-  --color-other: #9d1c5d;
+  --color-other: #8f102d;
 }
 
 html {
@@ -935,9 +939,8 @@ nav .wrapper .burger .hide {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -949,7 +952,7 @@ nav .wrapper .burger .hide {
   position: absolute;
   top: -12%;
   left: -8%;
-  padding: 0.1em;
+  padding: 0em 0.4em 0.1em 0em;
   font-size: 6rem;
   color: var(--color-mediumone);
   background-color: var(--color-white);
@@ -961,6 +964,9 @@ nav .wrapper .burger .hide {
   margin-bottom: 0.8em;
 }
 .sectionopinions .swiper .swiper-wrapper .cardopinion__card--name {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
   font-size: 1.4rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -968,6 +974,138 @@ nav .wrapper .burger .hide {
 .sectionopinions .swiper .swiper-pagination {
   position: absolute;
   bottom: 0;
+}
+
+.sectioncontact {
+  padding: 8em 2em 2em 2em;
+  overflow: hidden;
+}
+.sectioncontact .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sectioncontact .wrapper .box {
+  margin-top: 6em;
+  width: 100%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sectioncontact .wrapper .box .contactbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1em;
+}
+.sectioncontact .wrapper .box .contactbox label {
+  font-size: 1.8rem;
+  margin-bottom: 0.2em;
+}
+.sectioncontact .wrapper .box .contactbox input {
+  padding: 0.8em 0.4em;
+  font-size: 1.4rem;
+  border: 0.04em solid var(--color-mediumthree);
+  margin-bottom: 0.4em;
+}
+.sectioncontact .wrapper .box .contactbox p {
+  color: var(--color-other);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.sectioncontact .wrapper .box .contactbox .textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+  font-size: 1.8rem;
+  padding: 0.6em 0.8em;
+  margin-bottom: 0.4em;
+  border: 0.04em solid var(--color-mediumthree);
+}
+.sectioncontact .wrapper .btncontact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.sectioncontact .wrapper .btncontact button {
+  width: 40%;
+  padding: 0.8em 2em;
+}
+.sectioncontact .wrapper .status {
+  position: absolute;
+  top: 0;
+  padding: 1em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
+  background-color: var(--color-mediumone);
+  -webkit-transition: visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.sectioncontact .wrapper .status .statusinfo {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+.sectioncontact .wrapper .sendsuccess {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.sectioncontact .wrapper .senderror {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  background-color: var(--color-other);
 }
 
 @media (max-width: 576px) {
@@ -1136,6 +1274,45 @@ nav .wrapper .burger .hide {
     position: absolute;
     left: 0%;
   }
+  .sectionopinions .heading {
+    margin-bottom: 1.5em;
+  }
+  .sectionopinions .heading__head {
+    font-size: 2.2rem;
+  }
+  .sectionopinions .swiper {
+    width: 100%;
+    height: 300px;
+  }
+  .sectionopinions .swiper .swiper-wrapper .cardopinion__card {
+    height: 80%;
+  }
+  .sectionopinions .swiper .swiper-wrapper .cardopinion__card--text {
+    z-index: 1;
+  }
+  .sectioncontact .wrapper .box {
+    height: 60%;
+    margin-bottom: 2.8em;
+  }
+  .sectioncontact .wrapper .box .contactbox {
+    margin-bottom: 0.4em;
+  }
+  .sectioncontact .wrapper .box .contactbox label {
+    font-size: 1.4rem;
+  }
+  .sectioncontact .wrapper .box .contactbox input {
+    padding: 0.6em 0.4em;
+  }
+  .sectioncontact .wrapper .box .contactbox p {
+    font-size: 1.6rem;
+  }
+  .sectioncontact .wrapper .box .contactbox .textarea {
+    max-height: 140px;
+    min-height: 140px;
+  }
+  .sectioncontact .wrapper .status {
+    top: -5%;
+  }
 }
 @media (min-width: 768px) {
   nav .navcontact {
@@ -1168,7 +1345,7 @@ nav .wrapper .burger .hide {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 70%;
+    width: 90%;
     height: 100%;
     top: 0;
     padding: 0;
@@ -1263,6 +1440,16 @@ nav .wrapper .burger .hide {
   .sectionteams .swiper {
     width: 75%;
     height: 100%;
+  }
+  .sectionopinions .heading {
+    margin-bottom: 1.5em;
+  }
+  .sectionopinions .heading__head {
+    font-size: 4.2rem;
+  }
+  .sectionopinions .swiper {
+    width: 100%;
+    height: 300px;
   }
 }
 @media (min-width: 992px) {
@@ -1427,6 +1614,21 @@ nav .wrapper .burger .hide {
   }
   .sectionteams .teams__info p {
     margin-left: 9em;
+  }
+  .sectioncontact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sectioncontact .wrapper {
+    width: 70%;
   }
 }
 @media (min-width: 1400px) {
