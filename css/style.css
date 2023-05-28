@@ -112,6 +112,7 @@ button:hover {
   --color-darkone: #373b3e;
   --color-dark: #000000;
   --color-other: #8f102d;
+  --color-othererror: rgba(143, 16, 46, 0.2);
 }
 
 html {
@@ -1039,6 +1040,10 @@ nav .wrapper .burger .hide {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 700;
+  visibility: hidden;
+}
+.sectioncontact .wrapper .box .contactbox .actionerror {
+  visibility: visible;
 }
 .sectioncontact .wrapper .box .contactbox .textarea {
   max-width: 100%;
@@ -1049,6 +1054,12 @@ nav .wrapper .burger .hide {
   padding: 0.6em 0.8em;
   margin-bottom: 0.4em;
   border: 0.04em solid var(--color-mediumthree);
+}
+.sectioncontact .wrapper .box .contactbox .backgrounderror {
+  background-color: var(--color-othererror);
+}
+.sectioncontact .wrapper .box .contactbox .backgroundsuccess {
+  background-color: var(--color-lightfourBlend);
 }
 .sectioncontact .wrapper .btncontact {
   width: 100%;
@@ -1069,7 +1080,9 @@ nav .wrapper .burger .hide {
 .sectioncontact .wrapper .status {
   position: absolute;
   top: 0;
-  padding: 1em 5em;
+  width: 50%;
+  height: 10%;
+  padding: 1em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1083,26 +1096,23 @@ nav .wrapper .burger .hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  visibility: hidden;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
-  background-color: var(--color-mediumone);
-  -webkit-transition: visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 1s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 1s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .sectioncontact .wrapper .status .statusinfo {
   font-size: 2rem;
   color: var(--color-white);
 }
 .sectioncontact .wrapper .sendsuccess {
-  visibility: visible;
+  background-color: var(--color-mediumone);
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 .sectioncontact .wrapper .senderror {
-  visibility: visible;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   background-color: var(--color-other);
@@ -1311,6 +1321,7 @@ nav .wrapper .burger .hide {
     min-height: 140px;
   }
   .sectioncontact .wrapper .status {
+    width: 100%;
     top: -5%;
   }
 }

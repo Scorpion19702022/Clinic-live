@@ -22,6 +22,7 @@
 	--color-darkone: #373b3e;
 	--color-dark: #000000;
 	--color-other: #8f102d;
+	--color-othererror: rgba(143, 16, 46, 0.2);
 }
 
 html {
@@ -695,6 +696,10 @@ nav {
 					text-align: center;
 					font-size: 1.8rem;
 					font-weight: 700;
+					visibility: hidden;
+				}
+				.actionerror {
+					visibility: visible;
 				}
 				.textarea {
 					max-width: 100%;
@@ -705,6 +710,12 @@ nav {
 					padding: 0.6em 0.8em;
 					margin-bottom: 0.4em;
 					border: 0.04em solid var(--color-mediumthree);
+				}
+				.backgrounderror {
+					background-color: var(--color-othererror);
+				}
+				.backgroundsuccess {
+					background-color: var(--color-lightfourBlend);
 				}
 			}
 		}
@@ -723,26 +734,25 @@ nav {
 		.status {
 			position: absolute;
 			top: 0;
-			padding: 1em 5em;
+			width: 50%;
+			height: 10%;
+			padding: 1em 2em;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			visibility: hidden;
 			transform: translateY(-300%);
-			background-color: var(--color-mediumone);
-			transition: transform 0.3s ease-in-out, visibility 1s ease-in-out;
+			transition: transform 0.3s ease-in-out;
 			.statusinfo {
 				font-size: 2rem;
 				color: var(--color-white);
 			}
 		}
 		.sendsuccess {
-			visibility: visible;
+			background-color: var(--color-mediumone);
 			transform: translateY(0%);
 		}
 		.senderror {
-			visibility: visible;
 			transform: translateY(0%);
 			background-color: var(--color-other);
 		}
