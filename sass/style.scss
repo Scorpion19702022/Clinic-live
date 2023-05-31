@@ -771,6 +771,10 @@ footer {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		.heading {
+			font-size: 3rem;
+			color: var(--color-lighttwo);
+		}
 		.info {
 			width: 100%;
 			display: flex;
@@ -779,45 +783,45 @@ footer {
 			justify-content: center;
 			border-bottom: 0.04em solid var(--color-lightfour);
 			margin-bottom: 1em;
-			&__heading {
-				font-size: 3rem;
-				color: var(--color-lighttwo);
-			}
 			.address {
 				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				p {
-					padding: 0.4em;
-					color: var(--color-lightone);
-				}
-				i {
-					margin-right: 0.2em;
-					color: var(--color-lightfour);
+				&__box {
+					display: flex;
+					justify-content: space-between;
+					p {
+						padding: 0.4em;
+						color: var(--color-lightone);
+					}
+					i {
+						margin-right: 0.2em;
+						color: var(--color-lightfour);
+					}
 				}
 			}
 			.media {
 				width: 50%;
-				display: flex;
-				justify-content: space-around;
-				align-items: flex-end;
 				padding: 0.1em;
 				margin-bottom: 1em;
-				&__heading {
-					font-size: 2rem;
-					color: var(--color-lightone);
-				}
-				&__socialmedia {
-					width: 50%;
+				&__box {
 					display: flex;
 					justify-content: space-around;
-					i {
-						font-size: 2em;
-						color: var(--color-lighttwo);
-						cursor: pointer;
-						transition: color 0.1s ease-in-out;
-						&:hover {
-							color: var(--color-other);
+					align-items: flex-end;
+					&--heading {
+						font-size: 2rem;
+						color: var(--color-lightone);
+					}
+					&--socialmedia {
+						width: 50%;
+						display: flex;
+						justify-content: space-around;
+						i {
+							font-size: 2em;
+							color: var(--color-lighttwo);
+							cursor: pointer;
+							transition: color 0.1s ease-in-out;
+							&:hover {
+								color: var(--color-other);
+							}
 						}
 					}
 				}
@@ -831,6 +835,10 @@ footer {
 			p {
 				font-size: 1.4em;
 				color: var(--color-lighttwo);
+			}
+			.year {
+				color: var(--color-lighttwo);
+				padding-left: 0.2em;
 			}
 		}
 	}

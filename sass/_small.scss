@@ -228,4 +228,33 @@
 			}
 		}
 	}
+
+	footer {
+		.wrapper {
+			.heading {
+				font-size: 3.6rem;
+				margin-bottom: 0.4em;
+			}
+			.info {
+				width: 100%;
+				.address {
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					padding-bottom: 1em;
+					border-bottom: 0.02em solid var(--color-lightfour);
+					&__box {
+						flex-direction: column;
+						p {
+							padding: 0.1em;
+						}
+					}
+				}
+				.media {
+					padding-top: 1em;
+					width: 100%;
+				}
+			}
+		}
+	}
 }
